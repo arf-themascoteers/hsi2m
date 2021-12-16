@@ -50,8 +50,14 @@ class DataReader:
         self.x_test = sequences[train_set_size:train_set_size + test_set_size]
         self.y_test = results[train_set_size:train_set_size + test_set_size]
 
+        self.cutoff = train_set_size
+
     def get_data(self):
         return self.x_train, self.y_train, self.x_test, self.y_test
+
+
+    def get_all_data(self):
+        return torch.cat((self.x_train, self.x_test)),  torch.cat((self.y_train,  self.y_test))
 
 
 if __name__ == "__main__":

@@ -2,6 +2,14 @@ import matplotlib.pyplot as plt
 import data_reader
 from data_reader import DataReader
 
+def plot_single(y, cutoff = None):
+    plt.xlabel("Time")
+    plt.ylabel("Moisture")
+    plt.plot(y, label="Original")
+    plt.legend()
+    if cutoff is not None:
+        plt.plot(cutoff, y[cutoff], "ro")
+    plt.show()
 
 def plot(y, y_pred):
     plt.plot(y, label="Original")

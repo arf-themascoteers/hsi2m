@@ -8,16 +8,19 @@ import os
 import train
 import plotter
 from data_reader import DataReader
+import plotter
 
 
 def test():
+    dr = DataReader()
+    _, y_all = dr.get_all_data()
+    plotter.plot_single(y_all, dr.cutoff)
+    x_train, y_train, x_test, y_test = dr.get_data()
+
     model = Machine()
     #if not os.path.isfile("models/machine.h5"):
     train.train()
     model = torch.load("models/machine.h5")
-
-    dr = DataReader()
-    x_train, y_train, x_test, y_test = dr.get_data()
 
     criterion = torch.nn.MSELoss(reduction='mean')
     y_test_pred = model(x_test)
