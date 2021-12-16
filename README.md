@@ -32,3 +32,15 @@ Then, sequences are:
 | [ (1.2, 2.2, 3.2), (1.3, 2.3, 3.3),  (1.4, 2.4, 3.4) ] | 4.5      | 
 | [ (1.3, 2.3, 3.3),  (1.4, 2.4, 3.4), (1.5, 2.5, 3.5) ] | 4.6      | 
 | ...                                                    | ...      | 
+
+# Thoughts for future
+
+1. Use drone-based data
+
+2. Use cube data instead of single spectral line. (By passing through convolution)
+
+# References
+
+1. Felix M. Riese and Sina Keller, “Introducing a Framework of Self-Organizing Maps for Regression of Soil Moisture with Hyperspectral Data,”
+
+2. R Cui, C Hettiarachchi, "Personalised Short-Term Glucose Prediction via Recurrent Self-Attention Network"
